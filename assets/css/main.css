@@ -268,19 +268,14 @@ html.js body {
   gap: 6px;
   height: 36px;
 }
-.brand svg {
-  width: 30px;
-  height: 30px;
-}
-.brand__word {
-  font-family: var(--font-head);
-  font-weight: 800;
-  font-size: 1.35rem;
-  color: var(--white);
-  letter-spacing: -0.03em;
-}
-.brand__word span {
-  color: var(--cyan);
+.brand__logo {
+  width: auto;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 6px 14px;
+  box-shadow: 0 2px 12px rgba(2, 8, 18, 0.25);
+  object-fit: contain;
 }
 .nav-links {
   display: flex;
@@ -826,8 +821,9 @@ select[aria-invalid="true"] {
   gap: 40px;
   padding-bottom: 56px;
 }
-.footer .brand__word {
-  font-size: 1.5rem;
+.footer .brand__logo {
+  height: 64px;
+  padding: 6px 16px;
 }
 .footer__desc {
   color: var(--slate-light);
