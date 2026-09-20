@@ -1437,6 +1437,9 @@ select[aria-invalid="true"] {
     width: 100%;
     justify-content: center;
   }
+  html {
+    zoom: 0.88;
+  }
   body {
     font-size: 16px;
   }
