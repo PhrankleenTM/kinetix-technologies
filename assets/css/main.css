@@ -271,10 +271,6 @@ html.js body {
 .brand__logo {
   width: auto;
   height: 36px;
-  background: #ffffff;
-  border-radius: 6px;
-  padding: 4px 10px;
-  box-shadow: 0 2px 12px rgba(2, 8, 18, 0.25);
   object-fit: contain;
 }
 .nav-links {
@@ -839,8 +835,7 @@ select[aria-invalid="true"] {
   padding-bottom: 56px;
 }
 .footer .brand__logo {
-  height: 64px;
-  padding: 6px 16px;
+  height: 48px;
 }
 .footer__desc {
   color: var(--slate-light);
@@ -1521,7 +1516,6 @@ select[aria-invalid="true"] {
   }
   .brand__logo {
     height: 31px;
-    padding: 3px 8px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
