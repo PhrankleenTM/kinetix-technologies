@@ -1515,7 +1515,7 @@ select[aria-invalid="true"] {
     gap: 18px;
   }
   .brand__logo {
-    height: 31px;
+    height: 34px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
