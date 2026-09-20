@@ -1,8 +1,8 @@
 ﻿(function () {
   "use strict";
   const CONFIG = {
-    contactFormId: "REPLACE_WITH_YOUR_FORMPREE_ID",
-    newsletterFormId: "REPLACE_WITH_YOUR_FORMPREE_ID",
+    contactFormId: "meaoaeok",
+    newsletterFormId: "mrpbpebd",
   };
   const STRINGS = {
     required: "This field is required.",
@@ -33,6 +33,7 @@
     }
   }
   function showAlert(target, ok, title, body) {
+    if (!target) return;
     target.innerHTML = "";
     if (title) {
       const h = document.createElement("strong");
@@ -146,7 +147,7 @@
         return;
       }
       setBusy(btn, true);
-      alert.setAttribute("aria-live", "polite");
+      if (alert) alert.setAttribute("aria-live", "polite");
       postForm(form, endpointId)
         .then(function () {
           setBusy(btn, false);
