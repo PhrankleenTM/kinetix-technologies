@@ -11,18 +11,29 @@
   const burger = doc.getElementById("burger");
   const navLinks = doc.getElementById("nav-links");
   if (burger && navLinks) {
-    function closeMenu() {
-      burger.setAttribute("aria-expanded", "false");
-      burger.setAttribute("aria-label", "Open menu");
-      navLinks.classList.remove("open");
-    }
-    burger.addEventListener("click", function () {
-      const open = navLinks.classList.toggle("open");
+    const backdrop = doc.createElement("div");
+    backdrop.className = "nav-backdrop";
+    doc.body.appendChild(backdrop);
+    function setMenu(open) {
+      navLinks.classList.toggle("open", open);
+      burger.classList.toggle("open", open);
       burger.setAttribute("aria-expanded", open ? "true" : "false");
       burger.setAttribute(
         "aria-label",
         open ? "Close menu" : "Open menu",
       );
+      doc.body.classList.toggle("menu-open", open);
+      backdrop.classList.toggle("is-visible", open);
+    }
+    function closeMenu() {
+      setMenu(false);
+    }
+    burger.addEventListener("click", function () {
+      setMenu(!navLinks.classList.contains("open"));
+    });
+    backdrop.addEventListener("click", closeMenu);
+    doc.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeMenu();
     });
     navLinks.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", closeMenu);
